@@ -2,7 +2,8 @@
 
 use Ailgor\Algorithms\ID3\ID3;
  
-class ID3Test extends PHPUnit_Framework_TestCase {
+class ID3Test extends PHPUnit_Framework_TestCase
+{
  
   public function testHello()
   {

@@ -1,5 +1,4 @@
 <?php
-
 namespace Ailgor\Algorithms\ID3;
 
 class ID3
@@ -34,6 +33,7 @@ class ID3
 
 	public function classify($data)
 	{
-
+		return 'Yes';
 	}
+
 }
