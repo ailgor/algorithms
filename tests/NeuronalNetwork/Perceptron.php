@@ -7,7 +7,7 @@ class PerceptronTest extends PHPUnit_Framework_TestCase
  
   public function testAND()
   {
-  	$weight = [1, 1];
+  	$weights = [1, 1];
 	$trainingData = [
 						[[-1, -1], -1],
 						[[1, -1], -1],
@@ -21,9 +21,12 @@ class PerceptronTest extends PHPUnit_Framework_TestCase
 					[[1, 1], 1]
 				];
 
-  	$perceptron = new Perceptron();
-  	$perceptron->weight($weight);
-  	$accuracy = $perceptron->train($trainingData, $testData);
+	$perceptron = (new Perceptron())
+					->weights($weights)
+					->w0(0.5)
+					->maxIterations(10)
+					->minError(0.2);
+  	$perceptron->train($trainingData, $testData);
   	$dataInput = [1, 1];
   	$result = $perceptron->classify($dataInput);
   	if ($result == -1 || $result == 1) {
