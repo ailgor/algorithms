@@ -1,6 +1,6 @@
 <?php
 
-use Ailgor\Algorithms\NeuronalNetwork\Perceptron;
+use Ailgor\ML\NeuronalNetwork\Perceptron;
  
 class PerceptronTest extends PHPUnit_Framework_TestCase
 {

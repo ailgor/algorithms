@@ -1,5 +1,5 @@
 <?php
-namespace Ailgor\Algorithms\NeuronalNetwork;
+namespace Ailgor\ML\NeuronalNetwork;
 
 class Perceptron
 {
@@ -74,7 +74,7 @@ class Perceptron
 
 		while ($this->error > $this->minError && $this->currentIteration < $this->maxIterations) {	
 			$this->currentIteration++;
-			$this->learning($trainingData);
+			$this->learn($trainingData);
 			$this->test($testData);
 		}
 	}
@@ -94,7 +94,7 @@ class Perceptron
 		$this->error = round($errors / $total, 2);
 	}
 
-	public function learning($trainingData)
+	public function learn($trainingData)
 	{
 		foreach ($trainingData as $example) {
 			$x = $example[0];

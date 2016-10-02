@@ -2,7 +2,7 @@
 
 require_once('./vendor/autoload.php');
 
-use Ailgor\Algorithms\NeuronalNetwork\Perceptron;
+use Ailgor\ML\NeuronalNetwork\Perceptron;
 
 $weights = [1, 1];
 $trainingData = [
